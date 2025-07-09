@@ -48,18 +48,20 @@ const Features = () => {
           {features.map((feature, index) => (
             <Card 
               key={feature.number} 
-              className={`relative overflow-hidden border-2 border-${feature.color}-100 hover:border-${feature.color}-300 transition-all duration-300 hover:shadow-xl group`}
+              className={`relative overflow-hidden border-2 border-${feature.color}-100 hover:border-${feature.color}-300 transition-all duration-500 hover:shadow-2xl hover:scale-105 group cursor-pointer`}
             >
-              <CardContent className="p-8">
-                <div className={`absolute top-0 right-0 w-16 h-16 bg-${feature.color}-500 text-white flex items-center justify-center text-2xl transform rotate-12 translate-x-4 -translate-y-4`}>
-                  {feature.icon}
+              <CardContent className="p-8 text-center">
+                {/* Large animated icon at the top */}
+                <div className={`w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-${feature.color}-500 to-${feature.color}-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                  <span className="text-5xl animate-pulse group-hover:animate-bounce">{feature.icon}</span>
                 </div>
                 
-                <div className={`text-${feature.color}-500 text-6xl font-bold mb-4 opacity-20 group-hover:opacity-30 transition-opacity`}>
+                {/* Step number with glow effect */}
+                <div className={`text-${feature.color}-500 text-8xl font-bold mb-4 opacity-10 group-hover:opacity-20 transition-all duration-500 transform group-hover:scale-110`}>
                   {feature.number}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-${feature.color}-700 transition-colors duration-300">
                   {feature.title}
                 </h3>
                 <h4 className={`text-lg font-medium text-${feature.color}-600 mb-4`}>
@@ -72,6 +74,10 @@ const Features = () => {
                 <p className={`text-sm text-${feature.color}-700 italic`}>
                   {feature.descriptionBangla}
                 </p>
+
+                {/* Decorative elements */}
+                <div className={`absolute -top-2 -right-2 w-16 h-16 bg-${feature.color}-100 rounded-full opacity-50 group-hover:scale-150 group-hover:opacity-30 transition-all duration-500`}></div>
+                <div className={`absolute -bottom-4 -left-4 w-20 h-20 bg-${feature.color}-50 rounded-full opacity-30 group-hover:scale-125 group-hover:opacity-50 transition-all duration-500`}></div>
               </CardContent>
             </Card>
           ))}
