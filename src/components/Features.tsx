@@ -36,10 +36,10 @@ const Features = () => {
     <section id="features" className="py-20 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
             Complete Mobile Protection in 3 Steps
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl font-semibold text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Mobile Defender provides comprehensive cybersecurity protection designed specifically for users in Bangladesh.
           </p>
         </div>
@@ -57,21 +57,21 @@ const Features = () => {
                 </div>
                 
                 {/* Step number with glow effect */}
-                <div className={`text-${feature.color}-500 text-8xl font-bold mb-4 opacity-10 group-hover:opacity-20 transition-all duration-500 transform group-hover:scale-110`}>
+                <div className={`text-${feature.color}-500 text-8xl font-black mb-4 opacity-15 group-hover:opacity-25 transition-all duration-500 transform group-hover:scale-110`}>
                   {feature.number}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-${feature.color}-700 transition-colors duration-300">
+                <h3 className="text-3xl font-black text-gray-900 mb-3 group-hover:text-${feature.color}-700 transition-colors duration-300 tracking-tight">
                   {feature.title}
                 </h3>
-                <h4 className={`text-lg font-medium text-${feature.color}-600 mb-4`}>
+                <h4 className={`text-xl font-bold text-${feature.color}-600 mb-6`}>
                   {feature.titleBangla}
                 </h4>
                 
-                <p className="text-gray-600 mb-3 leading-relaxed">
+                <p className="text-lg font-semibold text-gray-700 mb-4 leading-relaxed">
                   {feature.description}
                 </p>
-                <p className={`text-sm text-${feature.color}-700 italic`}>
+                <p className={`text-base font-medium text-${feature.color}-700 italic bg-${feature.color}-50 p-3 rounded-lg`}>
                   {feature.descriptionBangla}
                 </p>
 
