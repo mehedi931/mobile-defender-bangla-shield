@@ -1,5 +1,35 @@
+import React, { useRef, useEffect } from 'react';
 
 const VideoSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (videoRef.current) {
+          if (entry.isIntersecting) {
+            videoRef.current.play();
+          } else {
+            videoRef.current.pause();
+          }
+        }
+      },
+      {
+        threshold: 0.5, // Play when 50% or more of video is in view
+      }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className="py-20 px-4 bg-gray-900">
       <div className="container mx-auto max-w-6xl">
@@ -16,11 +46,13 @@ const VideoSection = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black max-w-md">
             {/* 9:16 aspect ratio container for mobile video */}
             <div className="aspect-[9/16]">
-              <video 
+              <video
+                ref={videoRef}
                 className="w-full h-full object-cover"
-                controls
-                poster="/placeholder.svg"
-                preload="metadata"
+                muted
+                loop
+                playsInline
+                preload="auto"
               >
                 <source src="/1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
