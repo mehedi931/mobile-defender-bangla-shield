@@ -8,15 +8,17 @@ const VideoSection = () => {
       ([entry]) => {
         if (videoRef.current) {
           if (entry.isIntersecting) {
-            videoRef.current.play().catch((e) => console.warn('Autoplay blocked:', e));
+            // Try to play if muted
+            videoRef.current.muted = true;
+            videoRef.current.play().catch((e) => {
+              console.warn("Autoplay prevented:", e);
+            });
           } else {
             videoRef.current.pause();
           }
         }
       },
-      {
-        threshold: 0.5, // Play when 50% or more visible
-      }
+      { threshold: 0.5 }
     );
 
     if (videoRef.current) {
@@ -46,12 +48,15 @@ const VideoSection = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black max-w-md">
             {/* 9:16 aspect ratio container for mobile video */}
             <div className="aspect-[9/16]">
-              <video 
+              <video
                 ref={videoRef}
                 className="w-full h-full object-cover"
                 controls
+                muted // required for autoplay to work
+                playsInline
+                loop
+                preload="auto"
                 poster="/placeholder.svg"
-                preload="metadata"
               >
                 <source src="/1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
