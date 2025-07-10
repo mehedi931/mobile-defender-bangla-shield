@@ -50,7 +50,7 @@ const Features = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {features.map((feature, index) => (
             <Card 
-              key={feature.number} 
+              // key={feature.number} 
               className="relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:scale-105 group cursor-pointer bg-white"
             >
               <CardContent className="p-10 text-center relative z-10">
@@ -59,10 +59,10 @@ const Features = () => {
                   <span className="text-7xl animate-pulse group-hover:animate-bounce">{feature.icon}</span>
                 </div>
                 
-                {/* Step number */}
+                {/* Step number
                 <div className={`text-${feature.color}-500 text-9xl font-black mb-6 opacity-10 group-hover:opacity-20 transition-all duration-500 transform group-hover:scale-110 absolute top-4 right-6`}>
                   {feature.number}
-                </div>
+                </div> */}
                 
                 <h3 className={`text-4xl font-black text-gray-900 mb-4 group-hover:text-${feature.color}-700 transition-colors duration-300 tracking-tight`}>
                   {feature.title}
