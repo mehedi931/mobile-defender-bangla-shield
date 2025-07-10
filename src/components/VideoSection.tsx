@@ -28,18 +28,17 @@ const VideoSection = () => {
               </div>
             </div>
             
-            {/* Uncomment this when you have the video file uploaded to your project */}
-            {/* 
+          
             <video 
               className="w-full h-full object-cover"
               controls
               poster="/placeholder.svg"
               preload="metadata"
             >
-              <source src="/your-video-file.mp4" type="video/mp4" />
+              <source src="/1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            */}
+           
           </div>
           
           {/* Video overlay */}
@@ -52,11 +51,7 @@ const VideoSection = () => {
         </div>
         
         {/* Instructions for video upload */}
-        <div className="mt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            To add your video: Download the file from Google Drive, then upload it to your project files
-          </p>
-        </div>
+        
       </div>
     </section>
   );
