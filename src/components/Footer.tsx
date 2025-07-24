@@ -8,9 +8,9 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-defender-blue-900 font-bold">MD</span>
+                <span className="text-defender-blue-900 font-bold">VO</span>
               </div>
-              <span className="text-2xl font-bold">Mobile Defender</span>
+              <span className="text-2xl font-bold">VigilantOne</span>
             </div>
             <p className="text-defender-blue-200 mb-6 leading-relaxed">
               Bangladesh's most trusted mobile cybersecurity app. Protecting your digital life with advanced threat detection and user-friendly guidance in Bangla and English.
@@ -38,15 +38,16 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <span className="text-defender-blue-300">📧</span>
-                <span className="text-defender-blue-200">support@mobiledefender.bd</span>
+                <span className="text-defender-blue-200">websales@bengalmobileqa.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-defender-blue-300">📞</span>
-                <span className="text-defender-blue-200">+880-1XXX-XXXXXX</span>
+                <span className="text-defender-blue-200">+8801911614074</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-defender-blue-300">📍</span>
-                <span className="text-defender-blue-200">Dhaka, Bangladesh</span>
+                <span className="text-defender-blue-200">53, Purana Paltan (2nd Floor)
+Dhaka-1000, Bangladesh</span>
               </div>
             </div>
 
