@@ -13,7 +13,8 @@ const Header = () => {
           <span className="text-2xl font-black text-defender-blue-800">VigilantOne</span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="flex flex-wrap items-center space-x-4">
+
           <Link to="/#features" className="text-gray-600 hover:text-defender-blue-600 transition-colors font-semibold">Features</Link>
           <Link to="/defender-family" className="text-gray-600 hover:text-defender-blue-600 transition-colors font-semibold">Family Protection</Link>
           <a href="#testimonials" className="text-gray-600 hover:text-defender-blue-600 transition-colors font-semibold">Reviews</a>

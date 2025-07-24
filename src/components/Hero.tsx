@@ -33,7 +33,7 @@ const Hero = () => {
               size="lg" 
               className="bg-defender-green-500 hover:bg-defender-green-600 text-white px-12 py-6 text-xl rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 font-bold"
             >
-              Download Mobile Defender
+              Download VigilantOne
             </Button>
             <Button 
               variant="outline" 
