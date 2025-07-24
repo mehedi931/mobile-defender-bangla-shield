@@ -8,9 +8,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-defender-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-lg">MD</span>
+            <span className="text-white font-bold text-lg">VO</span>
           </div>
-          <span className="text-2xl font-black text-defender-blue-800">Mobile Defender</span>
+          <span className="text-2xl font-black text-defender-blue-800">VigilantOne</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
